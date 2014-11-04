@@ -26,7 +26,7 @@ public class FatemehActivity extends Activity implements OnItemSelectedListener 
     Spinner years;
     EditText intrestrate;
     Object yrs;
-    Integer[] paths = new Integer[20];
+    Integer[] num = new Integer[20];
 
 
     @Override
@@ -62,9 +62,9 @@ public class FatemehActivity extends Activity implements OnItemSelectedListener 
         });
 
         for (int i = 0; i < 20; i++) {
-            paths[i] = i + 1;
+            num[i] = i + 1;
         }
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, paths);
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, num);
         years = (Spinner) findViewById(R.id.spinner1);
         years.setAdapter(adapter);
         years.setOnItemSelectedListener(this);
